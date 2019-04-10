@@ -18,7 +18,11 @@ def getProcess(pName):
     return process_lst
 
 def load_avg():
+    # linux
     f = os.popen("uptime | sed 's/,//g' | awk '{print $8,$9,$10}'")
+
+    # mac
+    # f = os.popen("uptime | sed 's/,//g' | awk '{print $10,$11,$12}'")
     return f.read().strip()
 # 获取进程名位Python的进程对象列表
 process_lst = getProcess("htop")
@@ -49,7 +53,9 @@ psutil.cpu_percent(None)
 
 while True:
     sys_mem = psutil.virtual_memory().percent
-    print('system mem usage is: ',sys_mem)
-    print('system cpu usage is: ', psutil.cpu_percent(None))
-    print('system load average is:', load_avg(), '\n')
+    print('system mem usage is: %s%%' %(sys_mem))
+    # time.sleep(3)
+    # psutil.cpu_percent(None)
+    print('system cpu usage is: %s%%' %(psutil.cpu_percent(None)))
+    print('system load average is: ', load_avg(),'\n')
     time.sleep(2)
