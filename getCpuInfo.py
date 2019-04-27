@@ -6,7 +6,7 @@ import json, os, time, psutil
 
  
 def GetCPUorDiskTemper(type='Core'):
-	dict_cpu_temp = {}
+    	dict_cpu_temp = {}
 	if hasattr(psutil, "sensors_temperatures"):
 		temps = psutil.sensors_temperatures()
 	else:
