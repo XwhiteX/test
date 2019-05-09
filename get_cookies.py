@@ -37,12 +37,25 @@ def download_with_auth(self):
     token = json.loads(a)["access_token"]
     cookie = "Cookie:accessToken=%s" % token
 
-    # cookie = "Cookie:accessToken=2993d00bc58ba3382a37f4d42d0d73efb6bfa088"
-    # self.download_cmd = "cd %s && curl -H %s -O %s " % (self.home_build_dir, cookie, self.url)
-    download_cmd = "curl -H %s -O %s" % (cookie, self)
-    # LinuxCmd(download).run_cmd(timeout=600)
-    os.system(download_cmd)
+    return cookie
+print("download the build......")
 
 url = sys.argv[1]
-d = download_with_auth(url)
+print(url)
+
+cookie = download_with_auth(url)
+print(cookie)
+
+cmd = ("cd  %s; curl -H %s -O %s" % ('/Users/yueli/Desktop', cookie, url))
+runcmd = os.system(cmd)
+
+
+    # cookie = "Cookie:accessToken=2993d00bc58ba3382a37f4d42d0d73efb6bfa088"
+    # self.download_cmd = "cd %s && curl -H %s -O %s " % (self.home_build_dir, cookie, self.url)
+    # download_cmd = "curl -H %s -O %s" % (cookie, self)
+    # LinuxCmd(download).run_cmd(timeout=600)
+    # os.system(download_cmd)
+
+# url = sys.argv[1]
+# download_with_auth(url)
 # b = download_with_auth('https://release.agoralab.co/disk/v2.3.3.150_sei/AgoraSDK/Linux/testing/Agora_Server_SDK_for_Linux_v2_3_3_150_sei_FULL_20190427_1066.tar.gz')
