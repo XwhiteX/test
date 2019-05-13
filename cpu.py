@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import json, os, time, psutil
-# 定义一个进程列表
 process_lst = []
 
 def getProcess(pName):
@@ -26,6 +25,13 @@ def load_avg():
     return f.read().strip()
 # 获取进程名位Python的进程对象列表
 process_lst = getProcess("htop")
+
+# 获取录制在线数量
+def getRecorder():
+    # recorder = os.popen("ps -ef | grep AgoraCoreService | grep -v grep | wc -l", 'r')
+    # cmd = 'ps -ef | grep AgoraCoreService | grep -v grep | wc -l'
+    result = os.popen('ps -ef | grep AgoraCoreService | grep -v grep | wc -l')
+    return result.read()
 
 # 获取内存利用率：
 # for process_instance in process_lst:
@@ -57,5 +63,6 @@ while True:
     # time.sleep(3)
     # psutil.cpu_percent(None)
     print('system cpu usage is: %s%%' %(psutil.cpu_percent(None)))
-    print('system load average is: ', load_avg(),'\n')
+    print('system load average is: ', load_avg())
+    print('recorder is:', getRecorder())
     time.sleep(2)
