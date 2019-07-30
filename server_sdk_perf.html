@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="cc6286abc394488e96a2bcacc7fad0d4" style="width:900px; height:500px;"></div>
+    <div id="5f14c0a6c26f4a5fa67df892a83dedf5" style="width:900px; height:500px;"></div>
     <script>
-        var chart_cc6286abc394488e96a2bcacc7fad0d4 = echarts.init(
-            document.getElementById('cc6286abc394488e96a2bcacc7fad0d4'), 'white', {renderer: 'canvas'});
-        var option_cc6286abc394488e96a2bcacc7fad0d4 = {
+        var chart_5f14c0a6c26f4a5fa67df892a83dedf5 = echarts.init(
+            document.getElementById('5f14c0a6c26f4a5fa67df892a83dedf5'), 'white', {renderer: 'canvas'});
+        var option_5f14c0a6c26f4a5fa67df892a83dedf5 = {
     "color": [
         "#c23531",
         "#2f4554",
@@ -43,6 +43,7 @@
             "type": "bar",
             "name": "2.3.3.150_1080p_1",
             "data": [
+                16,
                 70.66,
                 9.88,
                 175.76,
@@ -62,6 +63,7 @@
             "type": "bar",
             "name": "2.3.3.150_1080p_2",
             "data": [
+                16,
                 60,
                 9.3,
                 0,
@@ -81,6 +83,7 @@
             "type": "bar",
             "name": "2.3.3.150_240p_1",
             "data": [
+                16,
                 78.5,
                 9.83,
                 26.18,
@@ -100,6 +103,7 @@
             "type": "bar",
             "name": "2.3.3.150_240p_2",
             "data": [
+                16,
                 60,
                 8.6,
                 0,
@@ -107,6 +111,26 @@
                 0,
                 0,
                 16
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "fontSize": 12
+            }
+        },
+        {
+            "type": "bar",
+            "name": "1\u671fplus_2.3.3.150_240p",
+            "data": [
+                8,
+                56.89,
+                6.4,
+                13.08,
+                380,
+                5.08,
+                5.078,
+                5.205
             ],
             "barCategoryGap": "20%",
             "label": {
@@ -122,13 +146,15 @@
                 "2.3.3.150_1080p_1",
                 "2.3.3.150_1080p_2",
                 "2.3.3.150_240p_1",
-                "2.3.3.150_240p_2"
+                "2.3.3.150_240p_2",
+                "1\u671fplus_2.3.3.150_240p"
             ],
             "selected": {
                 "2.3.3.150_1080p_1": true,
                 "2.3.3.150_1080p_2": true,
                 "2.3.3.150_240p_1": true,
-                "2.3.3.150_240p_2": true
+                "2.3.3.150_240p_2": true,
+                "1\u671fplus_2.3.3.150_240p": true
             },
             "show": true
         }
@@ -171,6 +197,12 @@
             "nameLocation": "end",
             "nameGap": 15,
             "gridIndex": 0,
+            "axisLabel": {
+                "show": true,
+                "position": "top",
+                "rotate": -10,
+                "fontSize": 12
+            },
             "inverse": false,
             "splitLine": {
                 "show": false,
@@ -182,9 +214,10 @@
                 }
             },
             "data": [
+                "CPU core",
                 "CPU(%)",
                 "Mem(Gb)",
-                "\u7f51\u7edc(rx:MB/S)",
+                "\u7f51\u7edc(tx:MB/S)",
                 "\u5728\u7ebf\u6570(\u4e2a)",
                 "load 1min",
                 "load 5min",
@@ -192,13 +225,12 @@
             ]
         }
     ],
-    "title": [
-        {
-            "text": "\u538b\u6d4b\u6027\u80fd\u7edf\u8ba1"
-        }
-    ]
+    "title": {
+        "text": "\u6027\u80fd\u7edf\u8ba1",
+        "subtext": "media server sdk"
+    }
 };
-        chart_cc6286abc394488e96a2bcacc7fad0d4.setOption(option_cc6286abc394488e96a2bcacc7fad0d4);
+        chart_5f14c0a6c26f4a5fa67df892a83dedf5.setOption(option_5f14c0a6c26f4a5fa67df892a83dedf5);
     </script>
 </body>
 </html>
