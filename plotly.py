@@ -14,3 +14,10 @@ def line_plots(name="line_plots.html"):
             items = line.split()
             dataset['cpu'].append(i)
             dataset['memory'].append()
+            i += 1
+
+    x = dataset['cpu']
+    y = dataset['memory']
+
+if __name__=='__main__':
+    line_plots
