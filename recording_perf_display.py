@@ -43,9 +43,9 @@ bar = (
     .add_yaxis("直播-单流", [])
     .add_yaxis("直播-合图", [])
     .add_yaxis("直播-裸数据", [])
-    .add_yaxis("unify-单流", [])
-    .add_yaxis("unify-合图", [])
-    .add_yaxis("unify-裸数据", [])
+    .add_yaxis("unify-单流", [69.72, 4.86, 5.68, 175, 9.24, 9.3, 9.26])
+    .add_yaxis("unify-合图", [42.25, 2.92, 1.7, 50, 7.42, 7.39, 7.8])
+    .add_yaxis("unify-裸数据", [46.3, 1.92, 8.7, 120, 8.21, 7.93, 7.41])
 
     # .set_global_opts(title_opts=opts.TitleOpts(title="压测性能统计"))
     # .set_global_opts(title_opts=opts.TitleOpts(title="\n"))
