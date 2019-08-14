@@ -27,28 +27,34 @@ bar = (
     Bar()
     .add_xaxis(
         [
-        "CPU core", 
+        # "CPU core",
         "CPU(%)", 
         "Mem(Gb)", 
-        "网络(tx:MB/S)", 
+        "网络(rx:MB/S)",
         "在线数(个)", 
         "load 1min", 
         "load 5min", 
         "load 15min"
         ]
     )
-    .add_yaxis("2.3.3.150_1080p_1", [16, 70.66, 9.88, 175.76, 500, 23.37, 20.51, 20.58])
-    .add_yaxis("2.3.3.150_1080p_2", [16, 60, 9.3, 0, 450, 0, 0, 16])
-    .add_yaxis("2.3.3.150_240p_1", [16, 78.50, 9.83, 26.18, 700, 25.63, 26.82, 25.39])
-    .add_yaxis("2.3.3.150_240p_2", [16, 60, 8.6, 0, 550, 0, 0, 16])
-    .add_yaxis("1期plus_2.3.3.150_240p", [8, 56.89, 6.4, 13.08, 380, 5.08, 5.078, 5.205])
+    .add_yaxis("通信-单流", [72.34, 5.08, 7.25, 175, 17.62, 17.4, 17.09])
+    .add_yaxis("通信-合图", [50.39, 3.17, 2.01, 50, 8.64, 9.25, 9.11])
+    .add_yaxis("通信-裸数据", [49.78, 4.14, 5.08, 120, 9.43, 9.32, 9.13])
+    .add_yaxis("直播-单流", [])
+    .add_yaxis("直播-合图", [])
+    .add_yaxis("直播-裸数据", [])
+    .add_yaxis("unify-单流", [69.72, 4.86, 5.68, 175, 9.24, 9.3, 9.26])
+    .add_yaxis("unify-合图", [42.25, 2.92, 1.7, 50, 7.42, 7.39, 7.8])
+    .add_yaxis("unify-裸数据", [46.3, 1.92, 8.7, 120, 8.21, 7.93, 7.41])
 
     # .set_global_opts(title_opts=opts.TitleOpts(title="压测性能统计"))
     # .set_global_opts(title_opts=opts.TitleOpts(title="\n"))
     # .set_global_opts(title_opts={"text": "性能统计", "subtext": "\n"})
     .set_global_opts(
         xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-10)),
-        title_opts={"text": "性能统计", "subtext": "\n", "subtext":"media server sdk"},
+        yaxis_opts=opts.AxisOpts()
+        # title_opts={"text": "性能统计", "subtext": "\n", "subtext": "recording sdk"},
+        # title_opts=opts.TitleOpts(title="压测性能统计")
     )
 )
-bar.render("server_sdk_perf.html")
+bar.render("recording_sdk_perf.html")
