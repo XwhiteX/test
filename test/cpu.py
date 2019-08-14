@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json, os, time, psutil
+import os, psutil
+from test import time
+
 process_lst = []
 
 def getProcess(pName):

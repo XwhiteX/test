@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
  
 # import json, os, time, psutil, netifaces
-import json, os, time, psutil
+import os, psutil
 
- 
+
 def GetCPUorDiskTemper(type='Core'):
     	dict_cpu_temp = {}
 	if hasattr(psutil, "sensors_temperatures"):
