@@ -7,11 +7,19 @@
 
 </head>
 <body>
-    <div id="60afd97798804e4e8fad3dd8c8e7cf3f" style="width:900px; height:500px;"></div>
+    <div id="293b6107de63468ea5e1e21b9a6b716e" class="chart-container" style="width:900px; height:500px;"></div>
     <script>
-        var chart_60afd97798804e4e8fad3dd8c8e7cf3f = echarts.init(
-            document.getElementById('60afd97798804e4e8fad3dd8c8e7cf3f'), 'white', {renderer: 'canvas'});
-        var option_60afd97798804e4e8fad3dd8c8e7cf3f = {
+        var chart_293b6107de63468ea5e1e21b9a6b716e = echarts.init(
+            document.getElementById('293b6107de63468ea5e1e21b9a6b716e'), 'white', {renderer: 'canvas'});
+        var option_293b6107de63468ea5e1e21b9a6b716e = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
     "color": [
         "#c23531",
         "#2f4554",
@@ -55,7 +63,7 @@
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
@@ -74,7 +82,7 @@
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
@@ -93,40 +101,64 @@
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
             "type": "bar",
             "name": "\u76f4\u64ad-\u5355\u6d41",
-            "data": [],
+            "data": [
+                66.3,
+                4.92,
+                9.91,
+                175,
+                19.9,
+                21.43,
+                22.76
+            ],
             "barCategoryGap": "20%",
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
             "type": "bar",
             "name": "\u76f4\u64ad-\u5408\u56fe",
-            "data": [],
+            "data": [
+                47.6,
+                3.2,
+                2.83,
+                50,
+                7.33,
+                7.83,
+                8.03
+            ],
             "barCategoryGap": "20%",
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
             "type": "bar",
             "name": "\u76f4\u64ad-\u88f8\u6570\u636e",
-            "data": [],
+            "data": [
+                40.4,
+                3.58,
+                6.79,
+                120,
+                10.62,
+                8.82,
+                8.9
+            ],
             "barCategoryGap": "20%",
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
@@ -145,7 +177,7 @@
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
@@ -164,7 +196,7 @@
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         },
         {
@@ -172,7 +204,7 @@
             "name": "unify-\u88f8\u6570\u636e",
             "data": [
                 46.3,
-                1.92,
+                3.84,
                 8.7,
                 120,
                 8.21,
@@ -183,7 +215,7 @@
             "label": {
                 "show": true,
                 "position": "top",
-                "fontSize": 12
+                "margin": 8
             }
         }
     ],
@@ -226,25 +258,6 @@
         },
         "borderWidth": 0
     },
-    "yAxis": [
-        {
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            }
-        }
-    ],
     "xAxis": [
         {
             "show": true,
@@ -256,9 +269,12 @@
                 "show": true,
                 "position": "top",
                 "rotate": -10,
-                "fontSize": 12
+                "margin": 8
             },
             "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
             "splitLine": {
                 "show": false,
                 "lineStyle": {
@@ -279,11 +295,33 @@
             ]
         }
     ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
     "title": [
         {}
     ]
 };
-        chart_60afd97798804e4e8fad3dd8c8e7cf3f.setOption(option_60afd97798804e4e8fad3dd8c8e7cf3f);
+        chart_293b6107de63468ea5e1e21b9a6b716e.setOption(option_293b6107de63468ea5e1e21b9a6b716e);
     </script>
 </body>
 </html>
