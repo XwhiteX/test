@@ -3,7 +3,7 @@ import re
 
 
 def modify_text():
-    with open('/Users/yueli/Desktop/linux_share/2.8.0_stable_perf/perf/com/health_check_case1_cpp_mix_com.txt',
+    with open('/Users/kkk/Desktop/health_check_case1_cpp_single_live.txt',
               "r+", ) as f:
         read_data = f.read()
         read_data_no_special = re.sub('[{}[\]\'-]', '', read_data)
@@ -13,9 +13,11 @@ def modify_text():
 
 modify_text()
 
+
+
 if __name__ == '__main__':
-    inputFile = '/Users/yueli/Desktop/linux_share/2.8.0_stable_perf/perf/com/health_check_case1_cpp_mix_com.txt'
-    outputFile = '/Users/yueli/Desktop/linux_share/2.8.0_stable_perf/perf/com/health_check_case1_cpp_mix_com.csv'
+    inputFile = '/Users/kkk/Desktop/health_check_case1_cpp_single_live.txt'
+    outputFile = '/Users/kkk/Desktop/health_check_case1_cpp_single_live.csv'
     row = []
 
     csvFile = open(outputFile, 'w', newline='')
@@ -25,3 +27,21 @@ if __name__ == '__main__':
     for line in lines:
         csvFile.write(line)
     csvFile.close()
+
+    with open(outputFile) as f:
+        # load_15m = []
+        fileList = f.read().split()
+        # fileList = f.read()
+        for line in fileList['min15']:
+            print(line)
+            # load_15 = line.split('min15')
+            # print(load_15)
+        # reader = csv.DictReader(fileList)
+        # min15 = [row['min15'] for row in reader]
+        # for line in fileList:
+        #     print(line)
+    f.close()
+
+
+
+
