@@ -9,9 +9,9 @@ def getPidByName(Str):
             pidList.append(pid.pid)
             # print('pid is:',pidList)
     print('pid is:',pidList)
-    # return pidList
+    return pidList
 
 
 if __name__ == '__main__':
-    pid = getPidByName('ssh')
+    pid = getPidByName('sougou')
     # print('ssh pid is:',pid)

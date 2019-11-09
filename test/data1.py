@@ -16,7 +16,7 @@ class Die:
 die = Die()
 result_list = []
 # 掷1000次
-for roll_num in range(1000):
+for roll_num in range(100000000):
     result = die.roll()
     result_list.append(result)
 
