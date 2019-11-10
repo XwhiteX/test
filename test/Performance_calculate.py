@@ -1,19 +1,32 @@
 # -*- coding:utf-8 -*-
+import re
 
-file_path = '/Users/kkk/Desktop/health_check_case1_cpp_single_live.txt'
-checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15']
+# file_path = '/Users/kkk/Desktop/health_check_case1_cpp_single_live.txt'
+checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15'] 
 
-def calculat(check_op):
+file_path = '/Users/yueli/Desktop/health_check_case4_cpp_single_live_h265.txt' # TODO 自动匹配地址
+
+# def calculat(check_op):
+#     with open(file_path, 'r') as f:
+#         data_list = []
+#         for line in f.readlines():
+#             list_a = line.strip().split(",") # 把数据按照逗号分隔开
+#             list_b = [x.strip() for x in list_a] # 把列表中的前后空格和换行符去掉
+#             if check_op in list_b:
+#                 data = list_b.index(check_op) + 1
+#                 data_list.append(list_b[data])
+#         return data_list
+def calculat(check_op='percent'):
     with open(file_path, 'r') as f:
         data_list = []
         for line in f.readlines():
-            list_a = line.strip().split(",") # 把数据按照逗号分隔开
-            list_b = [x.strip() for x in list_a] # 把列表中的前后空格和换行符去掉
+            # a = str(line)
+            b = re.sub("[^a-zA-Z0-9\s.\w$]", '', str(line)) # 匹配数字、字母、英文{dot.}、下滑线
+            list_b = b.strip().split(" ") # 把列表中的前后空格和换行符去掉
             if check_op in list_b:
                 data = list_b.index(check_op) + 1
                 data_list.append(list_b[data])
         return data_list
-    
 
 def avg(check_list):
     for check in checklist:
