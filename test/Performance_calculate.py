@@ -1,8 +1,10 @@
 # -*- coding:utf-8 -*-
 import re
 import sys
+from pyecharts.charts import Bar
+from pyecharts import options as opts
 
-checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15'] 
+checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15', 'online'] 
 # file_path = '/Users/yueli/Desktop/health_check_case4_cpp_single_live_h265.txt' # TODO 自动匹配地址
 file_path = sys.argv[1]
 
@@ -27,12 +29,15 @@ def avg(check_list):
         for item in calculat(check):
             sum_data += float(item)
         avg_data = '%.2f' % (sum_data / float(len(calculat(check)))) # 四舍五入取后两位
-        if check == 'cpu_percent':
+        if check == 'online':
+            print('Recording AgoraCoreService online is: ' + str(avg_data) + '\n')
+        elif check == 'cpu_percent':
             print('performance machine\'s CPU use percent is: ' + str(avg_data) + '%\n')
         elif check == 'percent':
             print('performance machine\'s MEM use percent is: ' + str(avg_data) + '%\n')
-        elif check == 'bps_rx': # 带宽换算还需要重新计算，目前拿到的是bps_rx
-            print('performance machine\'s NETWORK use is: ' + str(avg_data) + 'bps_rx\n')
+        elif check == 'bps_rx': 
+            net = '%.2f' % (float(avg_data) / 1000000 / 8) # 带宽换算，从 bps 换算到 MB/s
+            print('performance machine\'s NETWORK use is: ' + str(net) + ' MB/s\n')   
         else:
             print('performance machine\'s system load average ' + check + ' is: ' + str(avg_data) + '\n')
 
@@ -42,6 +47,51 @@ if __name__ == "__main__":
     # calculat(check_op='cpu_percent')
 
 
+# def avg(check_list):
+#     for check in checklist:
+#         sum_data = 0
+#         for item in calculat(check):
+#             sum_data += float(item)
+#         avg_data = '%.2f' % (sum_data / float(len(calculat(check)))) # 四舍五入取后两位
+#         if check == 'online':
+#             cnt = avg_data
+#             # print('Recording AgoraCoreService online is: ' + str(avg_data) + '\n')
+#         elif check == 'cpu_percent':
+#             cpu = avg_data
+#             # print('performance machine\'s CPU use percent is: ' + str(avg_data) + '%\n')
+#         elif check == 'percent':
+#             mem = avg_data
+#             # print('performance machine\'s MEM use percent is: ' + str(avg_data) + '%\n')
+#         elif check == 'bps_rx': 
+#             net = '%.2f' % (float(avg_data) / 1000000 / 8) # 带宽换算，从 bps 换算到 MB/s
+#             # print('performance machine\'s NETWORK use is: ' + str(net) + ' MB/s\n')   
+#         else:
+#             print('performance machine\'s system load average ' + check + ' is: ' + str(avg_data) + '\n')
+#     return cnt, cpu, mem, net
+
+
+# bar = ()
+#     Bar()
+#     .add_xaxis(
+#         [
+#         "CPU(%)", 
+#         "Mem(Gb)", 
+#         "网络(rx:MB/S)",
+#         "在线数(个)", 
+#         "load 1min", 
+#         "load 5min", 
+#         "load 15min"
+#         ]
+#     )
+#     .add_yaxis("直播-单流", [cpu, mem, net, cnt, 19.9, 21.43, 22.76])
+#     # .add_yaxis("直播-合图", [47.6, 3.2, 2.83, 50, 7.33, 7.83, 8.03])
+#     # .add_yaxis("直播-裸数据", [40.4, 3.58, 6.79, 120, 10.62, 8.82, 8.9])
+#     .set_global_opts(
+#         xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(rotate=-10)),
+#         yaxis_opts=opts.AxisOpts()
+#     )
+# )
+# bar.render("perf.html")
 
 
 
