@@ -29,23 +29,41 @@ def avg(check_list):
         for item in calculat(check):
             sum_data += float(item)
         avg_data = '%.2f' % (sum_data / float(len(calculat(check)))) # 四舍五入取后两位
+
         if check == 'online':
-            print('Recording AgoraCoreService online is: ' + str(avg_data) + '\n')
+            online = str(avg_data)
+            print('Recording AgoraCoreService online is: ' + online + '\n')
         elif check == 'cpu_percent':
-            print('performance machine\'s CPU use percent is: ' + str(avg_data) + '%\n')
+            cpu_percent = str(avg_data)
+            print('performance machine\'s CPU use percent is: ' + cpu_percent + '%\n')
         elif check == 'percent':
-            print('performance machine\'s MEM use percent is: ' + str(avg_data) + '%\n')
+            mem = str(avg_data)
+            print('performance machine\'s MEM use percent is: ' + mem + '%\n')
         elif check == 'bps_rx': 
             net = '%.2f' % (float(avg_data) / 1000000 / 8) # 带宽换算，从 bps 换算到 MB/s
             print('performance machine\'s NETWORK use is: ' + str(net) + ' MB/s\n')   
         else:
-            print('performance machine\'s system load average ' + check + ' is: ' + str(avg_data) + '\n')
+            load = str(avg_data)
+            print('performance machine\'s system load average ' + check + ' is: ' + load + '\n')
+            if check == 'min1':
+                min1 = str(avg_data)
+            elif check == 'min5':
+                min5 = str(avg_data)
+            else:
+                min15 = str(avg_data)
+    return online, cpu_percent, mem, net, min1, min5, min15
 
 if __name__ == "__main__":
     avg(checklist)
     # calculat(check_op='cpu_percent')
     # calculat(check_op='cpu_percent')
 
+bar = Bar()
+bar.add_xaxis(["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"])
+bar.add_yaxis("版本A", avg(checklist))
+# bar.add_yaxis("商家B", [57, 134, 137, 129, 145, 60, 49])
+bar.set_global_opts(title_opts=opts.TitleOpts(title="test for performance"))
+bar.render()
 
 # def avg(check_list):
 #     for check in checklist:
