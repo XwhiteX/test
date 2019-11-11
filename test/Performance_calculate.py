@@ -16,7 +16,7 @@ file_path = '/Users/yueli/Desktop/health_check_case4_cpp_single_live_h265.txt' #
 #                 data = list_b.index(check_op) + 1
 #                 data_list.append(list_b[data])
 #         return data_list
-def calculat(check_op='percent'):
+def calculat(check_op):
     with open(file_path, 'r') as f:
         data_list = []
         for line in f.readlines():
@@ -26,6 +26,8 @@ def calculat(check_op='percent'):
             if check_op in list_b:
                 data = list_b.index(check_op) + 1
                 data_list.append(list_b[data])
+        del(data_list[-2:]) # 去除list最后两个数
+        # print(data_list)
         return data_list
 
 def avg(check_list):
@@ -40,11 +42,12 @@ def avg(check_list):
         elif check == 'percent':
             print('performance machine\'s MEM use percent is: ' + str(avg_data) + '%\n')
         elif check == 'bps_rx': # 带宽换算还需要重新计算，目前拿到的是bps_rx
-            print('performance machine\'s NETWORK use is: ' + str(avg_data) + ' bps_rx\n')
+            print('performance machine\'s NETWORK use is: ' + str(avg_data) + '\n')
         else:
             print('performance machine\'s system load average ' + check + 'is: ' + str(avg_data) + '\n')
 
 avg(checklist)
+# calculat(check_op='cpu_percent')
 
 
         # a = calculat(check)
