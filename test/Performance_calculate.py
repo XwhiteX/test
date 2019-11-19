@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
 import re
 import sys
-from pyecharts.charts import Bar
+from pyecharts.charts import Bar,Line
 from pyecharts import options as opts
+
 
 checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15', 'online'] 
 # file_path = '/Users/yueli/Desktop/health_check_case4_cpp_single_live_h265.txt' # TODO 自动匹配地址
@@ -51,19 +52,26 @@ def avg(check_list):
                 min5 = str(avg_data)
             else:
                 min15 = str(avg_data)
-    return online, cpu_percent, mem, net, min1, min5, min15
+    return cpu_percent, mem, net, min1, min5, min15, online
 
-if __name__ == "__main__":
-    avg(checklist)
+# if __name__ == "__main__":
+#     avg(checklist)
     # calculat(check_op='cpu_percent')
     # calculat(check_op='cpu_percent')
 
-bar = Bar()
-bar.add_xaxis(["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"])
-bar.add_yaxis("版本A", avg(checklist))
-# bar.add_yaxis("商家B", [57, 134, 137, 129, 145, 60, 49])
-bar.set_global_opts(title_opts=opts.TitleOpts(title="test for performance"))
-bar.render()
+# 柱状图
+# bar = Bar()
+# bar.add_xaxis(["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"])
+# bar.add_yaxis("版本A", avg(checklist))
+# bar.set_global_opts(title_opts=opts.TitleOpts(title="test for performance"))
+# bar.render()
+
+
+# 折线图
+# perf_data = ["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"]
+cpu = avg(checklist)[0]
+print(cpu)
+
 
 # def avg(check_list):
 #     for check in checklist:

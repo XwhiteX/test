@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73cf3f73-a1ad-459f-9d1b-835317860d9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/youtube/Question.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/youtube/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/charts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Untitled-1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/a.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/b.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/data1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/data1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/hello.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/operatTXT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/timer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Performance_calculate.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/Performance_calculate.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,34 +15,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/data1.py">
+        <entry file="file://$PROJECT_DIR$/test/Performance_calculate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="68" selection-start-line="68" selection-end-line="73" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/recording_perf_display.py">
+        <entry file="file://$PROJECT_DIR$/test/charts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="523">
+              <caret line="108" column="60" lean-forward="true" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
               <folding>
-                <element signature="e#16#48#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/operatTXT.py">
+        <entry file="file://$PROJECT_DIR$/test/temperature_change_line_chart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+            <state relative-caret-position="40">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,12 +73,15 @@
         <option value="$PROJECT_DIR$/test/recording_perf_display.py" />
         <option value="$PROJECT_DIR$/test/operatT.py" />
         <option value="$PROJECT_DIR$/test/operatTXT.py" />
+        <option value="$PROJECT_DIR$/test/Performance_calculate.py" />
+        <option value="$PROJECT_DIR$/test/charts.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1497" />
     <option name="y" value="23" />
-    <option name="width" value="2560" />
+    <option name="width" value="1063" />
     <option name="height" value="1337" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -95,6 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,7 +107,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,10 +277,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1337" extended-state="6" />
+    <frame x="1497" y="23" width="1063" height="1337" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11539976" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22552784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -296,9 +291,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32931727" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4996426" weight="0.3325301" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4996426" visible="true" weight="0.40240964" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003574" side_tool="true" weight="0.56805557" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32931727" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -361,9 +356,7 @@
     <entry file="file://$PROJECT_DIR$/test/mediaserversdkapi.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/die_visual.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/die_visual.svg" />
     <entry file="file://$PROJECT_DIR$/test/Untitled-1.py" />
     <entry file="file://$PROJECT_DIR$/test/a.txt" />
     <entry file="file://$PROJECT_DIR$/test/b.txt" />
@@ -408,33 +401,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/operatT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/data1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/recording_perf_display.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#16#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/operatT.py" />
     <entry file="file:///usr/local/Cellar/python/3.7.4/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -442,10 +409,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/operatTXT.py">
+    <entry file="file://$PROJECT_DIR$/test/operatTXT.py" />
+    <entry file="file://$PROJECT_DIR$/test/data1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="14" column="52" lean-forward="true" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/recording_perf_display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#16#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/perf_display.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Performance_calculate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="68" selection-start-line="68" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/charts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="108" column="60" lean-forward="true" selection-start-line="108" selection-start-column="60" selection-end-line="108" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/temperature_change_line_chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
