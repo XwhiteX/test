@@ -59,18 +59,22 @@ def avg(check_list):
     # calculat(check_op='cpu_percent')
     # calculat(check_op='cpu_percent')
 
+import logging
+import logging.config
+
+
+logging.basicConfig(
+    format='%(name)s:%(lineno)d - %(levelname)s - %(message)s',
+    level=logging.DEBUG)
+
+
 # 柱状图
-# bar = Bar()
-# bar.add_xaxis(["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"])
-# bar.add_yaxis("版本A", avg(checklist))
-# bar.set_global_opts(title_opts=opts.TitleOpts(title="test for performance"))
-# bar.render()
+bar = Bar()
+bar.add_xaxis(["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"])
+bar.add_yaxis("版本A", avg(checklist))
+bar.set_global_opts(title_opts=opts.TitleOpts(title="test for performance"))
+bar.render()
 
-
-# 折线图
-# perf_data = ["online", "cpu pecent", "mem percent", "net(MB/s)", "min1", "min5", "min15"]
-cpu = avg(checklist)[0]
-print(cpu)
 
 
 # def avg(check_list):

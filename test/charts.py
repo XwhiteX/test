@@ -2,6 +2,14 @@ import re
 import sys
 from pyecharts.charts import Bar,Line
 from pyecharts import options as opts
+import logging
+import logging.config
+
+
+logging.basicConfig(
+    format='%(name)s:%(lineno)d - %(levelname)s - %(message)s',
+    level=logging.DEBUG)
+
 
 
 checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15', 'online']
@@ -56,7 +64,7 @@ mem = avg(checklist)[1]
 load_min1 = avg(checklist)[2]
 load_min5 = avg(checklist)[3]
 load_min15 = avg(checklist)[4]
-perf_data = list(range(20))
+perf_data = list(range(len(calculat("online"))))
 
 (
     Line(init_opts=opts.InitOpts(width="1600px", height="800px"))
