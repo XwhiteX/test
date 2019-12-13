@@ -5,13 +5,6 @@ from pyecharts import options as opts
 import logging
 import logging.config
 
-
-logging.basicConfig(
-    format='%(name)s:%(lineno)d - %(levelname)s - %(message)s',
-    level=logging.DEBUG)
-
-
-
 checklist = ['cpu_percent', 'percent', 'bps_rx', 'min1', 'min5', 'min15', 'online']
 # file_path = '/Users/yueli/Desktop/health_check_case4_cpp_single_live_h265.txt' # TODO 自动匹配地址
 file_path = sys.argv[1]
@@ -44,8 +37,12 @@ def avg(check_list):
             cpu_percent = calculat(check)
         elif check == 'percent':
             mem = calculat(check)
-        # elif check == 'bps_rx':
-        #     net = '%.2f' % (float(calculat(check)) / 1000000 / 8) # 带宽换算，从 bps 换算到 MB/s
+        elif check == 'bps_rx':
+            # net = ''
+            for net in range(len(calculat(check))):
+                return net
+            # net = '%.2f' % (float(calculat(check)) / 1000000 / 8) # 带宽换算，从 bps 换算到 MB/s
+            # net = calculat(check)
         else:
             load = calculat(check)
             if check == 'min1':
@@ -54,7 +51,7 @@ def avg(check_list):
                 min5 = calculat(check)
             else:
                 min15 = calculat(check)
-    return cpu_percent, mem,  min1, min5, min15, online
+    return cpu_percent, mem, min1, min5, min15, online, net
 
 
 # 折线图
@@ -64,6 +61,7 @@ mem = avg(checklist)[1]
 load_min1 = avg(checklist)[2]
 load_min5 = avg(checklist)[3]
 load_min15 = avg(checklist)[4]
+net = '%.2f' % (float(avg(checklist)[5]) / 1000000 /8)
 perf_data = list(range(len(calculat("online"))))
 
 (
@@ -111,6 +109,19 @@ perf_data = list(range(len(calculat("online"))))
     .add_yaxis(
         series_name="Load min15",
         y_axis=load_min15,
+        markpoint_opts=opts.MarkPointOpts(
+            data=[
+                opts.MarkPointItem(type_="max", name="最大值"),
+                opts.MarkPointItem(type_="mix", name="最小值"),
+            ]
+        ),
+        markline_opts=opts.MarkLineOpts(
+            data=[opts.MarkLineItem(type_="average", name="平均值")]
+        ),
+    )
+    .add_yaxis(
+        series_name="net",
+        y_axis=net,
         markpoint_opts=opts.MarkPointOpts(
             data=[
                 opts.MarkPointItem(type_="max", name="最大值"),
