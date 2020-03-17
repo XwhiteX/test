@@ -4,20 +4,19 @@ def test1(
         uid=None,
         x=None,
         y=None,
-        # region=None,
+        region=None,
         regionCount=None,
         user_list=None):
-    # region = [{
-    #     "uid": uid,
-    #     "x": x,
-    #     "y": y
-    # }]
-    # region =  region_list
 
     info_dict = {
         "recorderId": recorderId,
         "regionCount": regionCount,
-        "region_list": user_list
+        "region_list": user_list,
+        'region': [{
+            "uid": uid,
+            "x": x,
+            "y": y
+        }]
     }
     print(info_dict)
     return info_dict
